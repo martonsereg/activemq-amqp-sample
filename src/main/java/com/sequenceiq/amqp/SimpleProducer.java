@@ -14,7 +14,7 @@ public class SimpleProducer {
 
     private static final Boolean NON_TRANSACTED = false;
     private static final long MESSAGE_TIME_TO_LIVE_MILLISECONDS = 0;
-    private static final int MESSAGE_DELAY_MILLISECONDS = 100;
+    private static final int MESSAGE_DELAY_MILLISECONDS = 1000;
     private static final int NUM_MESSAGES_TO_BE_SENT = 100;
     private static final String CONNECTION_FACTORY_NAME = "qpidConnectionFactory";
     private static final String DESTINATION_NAME = "queue/simple";
