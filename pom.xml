@@ -12,21 +12,6 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	<profiles>
-		<profile>
-			<id>producer</id>
-			<properties>
-				<main.class>com.sequenceiq.amqp.SimpleProducer</main.class>
-			</properties>
-		</profile>
-		<profile>
-			<id>asyncConsumer</id>
-			<properties>
-				<main.class>com.sequenceiq.amqp.AsyncMessageConsumer</main.class>
-			</properties>
-		</profile>
-	</profiles>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -34,7 +19,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>1.0.0.RC4</version>
 				<configuration>
-					<mainClass>${main.class}</mainClass>
+					<mainClass>com.sequenceiq.amqp.AmqpApp</mainClass>
 				</configuration>
 				<executions>
 					<execution>
@@ -62,12 +47,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>3.2.6.RELEASE</version>
-			<exclusions>
-				<exclusion>
-					<groupId>commons-logging</groupId>
-					<artifactId>commons-logging</artifactId>
-				</exclusion>
-			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>

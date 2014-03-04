@@ -9,14 +9,10 @@ public class CustomMessageHandler implements MessageListener {
 
     public void onMessage(Message message) {
         try {
-            if (message != null) {
-                if (message instanceof TextMessage) {
-                    String text;
-                    text = ((TextMessage) message).getText();
-                    System.out.println("Got message: " + text);
-                }
-            } else {
-                System.out.println("nullmessage");
+            if (message instanceof TextMessage) {
+                String text;
+                text = ((TextMessage) message).getText();
+                System.out.println("Got message: " + text);
             }
         } catch (JMSException e) {
             System.out.println("JMS Exception");
